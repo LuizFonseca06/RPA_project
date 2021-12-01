@@ -44,7 +44,7 @@ To run, first change values in settings.py to locate appropriate driver.
 Then,
 
 ```
-
+python src/main.py 
 ```
 
 
@@ -57,9 +57,11 @@ Bora tentar primeiro burlar esse captcha maldito do [portal e-CAC](https://cav.r
 
 
 ##Problema
+
 ![img2](assets/images/img_2.png)
 
 ##Expected
+
 ![img3](assets/images/img_3.png)
 
 # References
