@@ -15,7 +15,7 @@ def main():
 
     options.add_argument("--start-maximized")
 
-    driver = webdriver.Chrome(options=options,
+    driver = webdriver.Safari(options=options,
                               service=s)
 
     driver.set_page_load_timeout(5)
@@ -23,13 +23,11 @@ def main():
     try:
         driver.get(URL)
     except TimeoutException:
-        driver.execute_script("window.stop();")
+        print("Não deu pra abrir a página.")
+        #driver.execute_script("window.stop();")
 
-    button = driver.find_element(By.XPATH, "//div[@id='login-dados-certificado']/p[2]/input")
-
-    time.sleep(0.25)
-    button.click()
-    time.sleep(10)
+    driver.find_element_by_xpath("//*[@id='login-dados-certificado']/p[2]/input").click()
+    #button = driver.find_element(By.XPATH, "//div[@id='login-dados-certificado']/p[2]/input")
 
 if __name__ == '__main__':
     main()
